@@ -1,0 +1,113 @@
+<!--
+
+  Name:- Parth Patel
+  Student:- parth_patel17@student.uml.edu.
+  assignment: Ui-slide bar for Hw4
+
+  
+-->
+
+<!DOCTYPE html>
+<html >
+    <head>
+
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+     
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/dark-hive/jquery-ui.min.css">
+
+      
+      <link rel="stylesheet" href="index.css">
+      
+    </head>
+    <body>
+
+    <div >
+         <div>
+            <h1 class="name">
+               <span class="title">Welcome to my page</span>
+            </h1>
+
+             <div>
+              <div class="info">Enter number between -10 and 50 to make multiplication table</div>
+            </div>
+
+         </div>
+
+        
+        <div class="row">
+            <div class="margins">
+              <form id="form" name="form" >
+                <div>
+                  <label>Starting horizontal number : </label>
+                  <input type="number" id="horizontal_start" name="horizontal_start" value="0" required>
+                  <div id="slider_horizontal_start"></div>
+                </div>
+
+                <div>
+                  <label>Ending horizontal number : </label>
+                  <input type="number" id="horizontal_end" name="horizontal_end" value="0" required>
+                  <div id="slider_horizontal_end"></div>
+                </div>
+
+                <div>
+                  <label>Starting vertical number : </label>
+                  <input type="number" id="vertical_start" name="vertical_start" value="0" required>
+                  <div id="slider_vertical_start"></div>
+                </div>
+
+                <div>
+                  <label>Ending vertical number : </label>
+                  <input type="number" id="vertical_end" name="vertical_end" value="0" required>
+                  <div id="slider_vertical_end"></div>
+                </div>
+
+                
+                <input id="button_submit" class="submit_button" type="submit" onClick="save_tab();" value="Submit">
+              </form>
+
+              
+              <div id="warning"></div>
+
+            </div>
+            
+            <div class="info"> Click "Submit" and Save the table. Only 5 tables will be saved.
+            </div>
+            
+          <div>
+            <div id="multiplication_table"></div>
+          </div>
+            
+        </div>
+   
+            
+            <div id="tabs">
+              <ul>
+              </ul>
+            </div>
+        
+    </div>       
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins). -->
+      <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+      <!-- Latest compiled and minified JavaScript -->
+      <script type='text/javascript' src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+      <!-- jQuery Validation plugin -->
+      <script type='text/javascript' src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.js"></script>
+      <script type='text/javascript' src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/additional-methods.js"></script>
+
+      <!-- jQuery UI Slider and Tab Wigets -->
+      <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+      <script type='text/javascript' src="table.js"></script>
+
+     <table>
+        <script>  //https://stackoverflow.com/questions/16335050/flexslider-2-how-to-load-with-document-ready-function
+            $( document ).ready(function() { slider(); validate(); auto_submit();  });
+        </script>
+     </table>
+    </body>
+</html>
